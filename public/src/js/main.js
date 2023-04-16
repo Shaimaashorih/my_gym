@@ -225,6 +225,7 @@ function gridPageResize() {
     else if(windowWidth < 991){
       pageContent.style.marginLeft = 'false';
       pageContent.style.marginInline = 'auto';
+      pageContent.style.width = `calc(100%)`;
 
     }
     if (windowWidth < 1200) {

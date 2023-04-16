@@ -186,6 +186,14 @@ header.db-header {
                 justify-content: center;
             }
         }
+        @media (max-width:991px) {
+            &{
+                padding: 5px 0 !important;
+                #page-title{
+                    font-size: 18px;
+                }
+            }
+        }
     }
 
 .log{
