@@ -170,14 +170,29 @@ header {
 
 header.db-header {
     .part2 {
+        &.gap-20{
+            gap: 0;
+        }
+        .f-b50:nth-child(1) {
+            @media (max-width:991px) {
+                justify-content: center;
+            }
+        }
+
         .f-b50:nth-child(2) {
             justify-content: flex-end;
+
+            @media (max-width:991px) {
+                justify-content: center;
+            }
         }
     }
 
-
+.log{
+    min-width: 46.02px;
+}
     .hrader-toggle {
-        
+
         &::before {
             content: '\f0c9';
             font-family: "Font Awesome 6 Free";
@@ -243,9 +258,30 @@ header.db-header {
     }
 
     .dropdown {
-        right: 0 !important;
-        left: auto;
-        width: fit-content;
+        @media (min-width:991px) {
+            & {
+                right: 0;
+                left: auto;
+            }
+        }
+
+        @media (max-width:991px) {
+            & {
+                position: fixed;
+                top: auto;
+                width: 100%;
+                background: #ffffff00;
+                box-shadow: 0 0 0 0;
+                display: grid;
+                justify-content: center;
+
+                .max-height {
+                    box-shadow: var(--mian-bx-shadow);
+                    background-color: var(--white);
+                    border: 2px solid #f1f1f110;
+                }
+            }
+        }
 
         .max-height {
             overflow-y: scroll;
@@ -307,14 +343,16 @@ header.db-header {
                     -ms-border-radius: 5px;
                     -o-border-radius: 5px;
                 }
-                
+
             }
         }
     }
-    [data-dropDown]{
-        .btn{
+
+    [data-dropDown] {
+        .btn {
             position: relative;
-            .length{
+
+            .length {
                 position: absolute;
                 bottom: 100%;
                 right: 0;
@@ -334,7 +372,7 @@ header.db-header {
                 -moz-border-radius: 50%;
                 -ms-border-radius: 50%;
                 -o-border-radius: 50%;
-}
+            }
         }
     }
 }
